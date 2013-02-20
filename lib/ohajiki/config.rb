@@ -14,7 +14,7 @@ module Ohajiki
       # Default settings
       case id
       when :LOG_PATH 
-        File.expand_path('../../tmp/ohajiki.log', `gem which ohajiki`)
+        '/tmp/ohajiki.log'
       when :REMOTE_REPO_URL 
         raise ConfigNotFound, "require REMOTE_REPO_URL in config file"  
       when :SYNC_DIR_PATH 
