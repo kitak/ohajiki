@@ -2,13 +2,16 @@
 
 Minimum Dropbox clone using Ruby and Git
 
+## Naming
+>節子，それドロップ(Drop)やない，おはじき(Ohajiki)や (火垂るの墓より)
+
 ## Installation
 
     $ gem install ohajiki
 
 ## Usage
 Write config file
-```
+```ruby
 REMOTE_REPO_URL = 'https://github.com/kitak/ohajiki.git' # Your remote repository url (necessary entry)
 SYNC_DIR_PATH = '/Users/kitak/.ohajiki' # Sync target (necessary entry)
 SYNC_INTERVAL_SEC = 5 # Polling Interval (optional entry. default 10)
