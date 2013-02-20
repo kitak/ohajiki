@@ -1,0 +1,3 @@
+REMOTE_REPO_URL = 'https://github.com/kitak/ohajiki_howm.git'
+SYNC_DIR_PATH = '/Users/kitak/.ohajiki'
+SYNC_INTERVAL_SEC = 10
