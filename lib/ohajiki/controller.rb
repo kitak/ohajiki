@@ -1,7 +1,6 @@
 # coding: utf-8
+
 require 'logger'
-require 'daemons'
-require 'grit'
 require File.expand_path('../../ohajiki', __FILE__)
 require File.expand_path('../config', __FILE__)
 require File.expand_path('../repo', __FILE__)
