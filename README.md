@@ -15,7 +15,7 @@ Write config file
 REMOTE_REPO_URL = 'https://github.com/kitak/ohajiki.git' # Your remote repository url (necessary entry)
 SYNC_DIR_PATH = '/Users/kitak/.ohajiki' # Sync target (necessary entry)
 SYNC_INTERVAL_SEC = 5 # Polling interval (optional entry. default 10)
-LOGPATH = '/tmp/ohajiki.log' # Logfile location (optional entry. default /tmp/ohajiki.log)
+LOG_PATH = '/tmp/ohajiki.log' # Logfile location (optional entry. default /tmp/ohajiki.log)
 ```
 
 start
