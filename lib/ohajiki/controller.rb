@@ -22,6 +22,8 @@ module Ohajiki
           Repo.new dir_path
         end
     rescue => e
+      puts "#{e.message}"
+      puts "#{e.backtrace}"
       @log.error "start: #{e.message}" if @log
     end
 

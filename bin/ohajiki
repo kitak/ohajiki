@@ -3,14 +3,13 @@
 require 'daemons'
 require 'ohajiki'
 
-if __FILE__ == $0
-  if ARGV.size == 4 && ARGV[1] == "--" && (ARGV[2] == "--config" || ARGV[2] == "-c") 
-    Ohajiki::Config.load(File.expand_path(ARGV[3]))
-  end
-
-  #pid_dir = 'tmp'
-  #Daemons.run_proc('ohajiki', {:dir => pid_dir}) do
-    controller = Ohajiki::Controller.new
-    controller.start
-  #end
+if ARGV.size == 4 && ARGV[1] == "--" && (ARGV[2] == "--config" || ARGV[2] == "-c") 
+  Ohajiki::Config.load(File.expand_path(ARGV[3]))
 end
+
+#pid_dir = 'tmp'
+#Daemons.run_proc('ohajiki', {:dir => pid_dir}) do
+  puts "booted"
+  controller = Ohajiki::Controller.new
+  controller.start
+#end
