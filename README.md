@@ -1,24 +1,29 @@
 # Ohajiki
 
-TODO: Write a gem description
+Minimum Dropbox clone using Ruby and Git
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'ohajiki'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install ohajiki
 
 ## Usage
+Write config file
+```
+REMOTE_REPO_URL = 'https://github.com/kitak/ohajiki.git' # Your remote repository url (necessary entry)
+SYNC_DIR_PATH = '/Users/kitak/.ohajiki' # Sync target (necessary entry)
+SYNC_INTERVAL_SEC = 5 # Polling Interval (optional entry. default 10)
+LOGPATH = '/tmp/ohajiki.log' # Logfile location (optional entry)
+```
 
-TODO: Write usage instructions here
+start
+```
+ohajiki start -- -c ohajiki.conf
+```
+
+stop
+```
+ohajiki stop
+```
 
 ## Contributing
 
