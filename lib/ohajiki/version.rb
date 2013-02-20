@@ -1,3 +1,3 @@
 module Ohajiki
-  VERSION = "0.0.3.1"
+  VERSION = "0.0.4"
 end
