@@ -10,7 +10,9 @@ module Ohajiki
     def initialize
       @log = Logger.new(File.expand_path(Config::LOG_PATH))
       @interval_sec = Config::SYNC_INTERVAL_SEC 
+
       dir_path = File.expand_path(Config::SYNC_DIR_PATH) 
+      FileUtils.mkdir_p dir_path
       
       @repo = 
         unless Repo.exist? dir_path
