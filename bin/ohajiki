@@ -8,9 +8,9 @@ if __FILE__ == $0
     Ohajiki::Config.load(File.expand_path(ARGV[3]))
   end
 
-  pid_dir = 'tmp'
-  Daemons.run_proc('ohajiki', {:dir => pid_dir}) do
+  #pid_dir = 'tmp'
+  #Daemons.run_proc('ohajiki', {:dir => pid_dir}) do
     controller = Ohajiki::Controller.new
     controller.start
-  end
+  #end
 end
