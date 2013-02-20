@@ -1,5 +1,5 @@
 require "ohajiki/version"
 
 module Ohajiki
-  # Your code goes here...
+  class ConfigNotFound < StandardError; end
 end
