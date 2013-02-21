@@ -21,6 +21,8 @@ module Ohajiki
         raise ConfigNotFound, "require SYNC_DIR_PATH in config file"  
       when :SYNC_INTERVAL_SEC
         10 
+      else
+        super
       end
     end
   end
