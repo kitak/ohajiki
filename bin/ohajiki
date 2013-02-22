@@ -9,6 +9,6 @@ end
 
 pid_dir = '/tmp'
 Daemons.run_proc('ohajiki', {:dir => pid_dir}) do
-  controller = Ohajiki::Controller.new
+  controller = Ohajiki::Service.new
   controller.start
 end
