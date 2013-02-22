@@ -19,7 +19,7 @@ module Ohajiki
       raise InitializeError
     end 
 
-    def fetch_repository
+    def fetch_repository(dir_path)
       unless Repo.exist? dir_path
         Repo.init(dir_path) do
           remote_add('origin', Config::REMOTE_REPO_URL)
