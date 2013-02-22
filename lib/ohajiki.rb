@@ -5,4 +5,5 @@ require File.expand_path('../ohajiki/repo', __FILE__)
 
 module Ohajiki
   class ConfigNotFound < StandardError; end
+  class RepositoryMissing < StandardError; end
 end
