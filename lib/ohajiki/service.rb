@@ -6,7 +6,7 @@ require File.expand_path('../config', __FILE__)
 require File.expand_path('../repo', __FILE__)
 
 module Ohajiki 
-  class Controller 
+  class Service 
     def initialize
       @log = Logger.new(File.expand_path(Config::LOG_PATH))
       @interval_sec = Config::SYNC_INTERVAL_SEC 
