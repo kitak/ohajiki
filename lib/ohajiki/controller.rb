@@ -13,18 +13,22 @@ module Ohajiki
 
       dir_path = File.expand_path(Config::SYNC_DIR_PATH) 
       FileUtils.mkdir_p dir_path
-      
-      @repo = 
-        unless Repo.exist? dir_path
-          Repo.init(dir_path) do
-            remote_add('origin', Config::REMOTE_REPO_URL)
-            pull!
-          end
-        else
-          Repo.new dir_path
-        end
-      raise RepositoryMissing unless @repo
+      @repo = fetch_repository(dir_path)
+    rescue => e
+      @log.error "init: #{e.message}"
+      raise InitializeError
     end 
+
+    def fetch_repository
+      unless Repo.exist? dir_path
+        Repo.init(dir_path) do
+          remote_add('origin', Config::REMOTE_REPO_URL)
+          pull!
+        end
+      else
+        Repo.new dir_path
+      end
+    end
 
     def start
       @log.info "start service"
