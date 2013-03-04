@@ -2,9 +2,6 @@
 
 Minimum Dropbox clone using Ruby and Git
 
-## Naming
->節子，それドロップ(Drop)やない，おはじき(Ohajiki)や :「火垂るの墓」より
-
 ## Installation
 
     $ gem install ohajiki
