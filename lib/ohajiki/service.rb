@@ -52,10 +52,10 @@ module Ohajiki
     end
 
     def update
-      if @repo.file_changed? 
-        @log.info "push #{@repo.changed_count} files"
-        @repo.add_stage! if @repo.file_added? 
-        @repo.commit_all!
+      @repo.add_stage! if @repo.file_changed? and @repo.file_added?
+      message = "push #{@repo.changed_count} files"
+      if @repo.commit_all!
+        @log.info message
         @repo.push!
       else
         @log.info "no changed"

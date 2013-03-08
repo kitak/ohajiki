@@ -76,9 +76,11 @@ module Ohajiki
     end
 
     def commit_all!
+      res = nil
       in_dir do
-        @repo.commit_all("#{changed_count} files updated")
+        res = @repo.commit_all("#{changed_count} files updated")
       end
+      res.match(/nothing to commit/).nil?
     end
 
     def file_changed?
